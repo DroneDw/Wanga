@@ -1,0 +1,242 @@
+/* General Chat Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Chat Container */
+.chat-container {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20%;
+}
+
+
+.chat-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Messages */
+#messages {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+/* Form */
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* ✅ Chat Messages Container */
+#messages {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    max-height: 400px; /* ✅ Set a max height for scrollability */
+    overflow-y: auto; /* ✅ Enables scrolling when messages exceed height */
+}
+
+/* ✅ Individual Message Styling */
+.message-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    padding: 10px;
+    margin: 8px 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    word-wrap: break-word;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ User Messages */
+.user-message {
+    align-self: flex-end; /* ✅ Push user messages to the right */
+    background: #007bff;
+    color: white;
+}
+
+/* ✅ Other User Messages */
+.other-message {
+    align-self: flex-start; /* ✅ Push other messages to the left */
+    background: #ddd;
+    color: black;
+}
+
+/* ✅ Message Timestamp */
+.message-time {
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+    margin-top: 5px;
+}
+
+/* ✅ Chat Input & Button Styling */
+#messageForm {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    outline: none;
+}
+
+#messageInput:focus {
+    border-color: #007bff;
+}
+
+#messageForm button {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#messageForm button:hover {
+    background: #0056b3;
+}
+/* ✅ Highlight Unread Messages */
+.unread-message {
+    background: #fffae6; /* ✅ Light yellow background */
+    border-left: 5px solid #ffcc00; /* ✅ Bold yellow border */
+    font-weight: bold;
+}
+.unread-message {
+    background-color: #fffa90; /* Light yellow for highlighting */
+    font-weight: bold;
+}
+/* ✅ Style for messages */
+.message-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* ✅ User's own messages */
+.user-message {
+    background-color: #a8d0ed; /* Light blue for user's sent messages */
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ✅ Other users' messages */
+.other-message {
+    background-color: #dfdbdb; /* Default gray for received messages */
+}
+
+/* ✅ Style for replies */
+.reply-info {
+    font-size: 12px;
+    font-style: italic;
+    color: #555;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #fffa90; /* Light yellow */
+    border-left: 4px solid #ffc107;
+    padding-left: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* ✅ Highlight teacher messages */
+.teacher-message {
+    background-color: #d1e7ff; /* Light blue for teacher messages */
+    font-weight: bold;
+}
+
+/* ✅ Unread messages */
+.unread-message {
+    font-weight: bold;
+    background-color: #fbe5e5; /* Soft red for unread */
+}
+/* ✅ Style for reply button */
+.reply-button {
+    background-color: #007BFF; /* Professional blue */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reply-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+/* ✅ Style for reply indicator */
+#replyIndicator {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    color: #333; /* White text */
+    padding: 8px 4px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+    max-width: 80%;
+    border-bottom: 12px, solid,#0056b3;
+}
+
+/* ✅ Ensure it's properly positioned */
+.hidden {
+    display: none;
+}
+footer {
+    padding: 20px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    position: fixed;
+    bottom: 0; /* ✅ Keeps it at the bottom */
+    left: 0;
+    width: 100%; /* ✅ Ensures it stretches across the entire width */
+    z-index: 1000; /* ✅ Ensures it stays above other elements */
+}

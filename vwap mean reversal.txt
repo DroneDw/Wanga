@@ -1,0 +1,34 @@
+//@version=5
+strategy("VWAP Mean Reversion Scalper", overlay=true, default_qty_type=strategy.percent_of_equity, default_qty_value=100)
+
+// VWAP Calculation
+vwap = ta.vwap(close)
+
+// Bullish reversal conditions
+longCondition = ta.crossover(close, vwap) and ta.rsi(close, 14) < 30
+
+// Bearish reversal conditions
+shortCondition = ta.crossunder(close, vwap) and ta.rsi(close, 14) > 70
+
+// ATR-based Stop Loss & Take Profit
+atrValue = ta.atr(14)
+stopLossMultiplier = 1.5
+takeProfitMultiplier = 2.0
+
+longStopLoss = close - (stopLossMultiplier * atrValue)
+longTakeProfit = close + (takeProfitMultiplier * atrValue)
+
+shortStopLoss = close + (stopLossMultiplier * atrValue)
+shortTakeProfit = close - (takeProfitMultiplier * atrValue)
+
+// Execute trades
+if longCondition
+    strategy.entry("Long", strategy.long)
+    strategy.exit("Take Profit/SL", from_entry="Long", stop=longStopLoss, limit=longTakeProfit)
+
+if shortCondition
+    strategy.entry("Short", strategy.short)
+    strategy.exit("Take Profit/SL", from_entry="Short", stop=shortStopLoss, limit=shortTakeProfit)
+
+// Plot VWAP
+plot(vwap, title="VWAP", color=color.orange)

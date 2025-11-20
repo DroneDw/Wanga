@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Payment - Wanga</title>
+    <link rel="stylesheet" href="pay_page.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Wanga</div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="payment-container">
+        <h1>Subscribe to Access Your Subjects</h1>
+        <p>Complete payment to unlock your selected courses for <strong>30 days</strong>.</p>
+
+        <!-- ✅ Payment Instructions Section -->
+        <div class="payment-instructions">
+            <h2>How to Pay</h2>
+            <p>Follow these steps to complete your payment via Mpamba or Airtel Money.</p>
+
+            <h3>📌 Mpamba Payment Instructions:</h3>
+            <ol>
+                <li>Dial <strong>*444#</strong> on your phone.</li>
+                <li>Select <strong>"Send Money"</strong>.</li>
+                <li>Enter our official Mpamba number: <strong>088XXXXXXXX</strong>.</li>
+                <li>Enter the amount corresponding to your selected subjects.</li>
+                <li>Confirm the transaction and note down the <strong>Transaction ID</strong>.</li>
+            </ol>
+
+            <h3>📌 Airtel Money Payment Instructions:</h3>
+            <ol>
+                <li>Dial <strong>*211#</strong> on your phone.</li>
+                <li>Select <strong>"Send Money"</strong>.</li>
+                <li>Enter our official Airtel Money number: <strong>099XXXXXXXX</strong>.</li>
+                <li>Enter the correct amount based on the selected subjects.</li>
+                <li>Confirm the transaction and save your <strong>Transaction ID</strong>.</li>
+            </ol>
+
+            <h3>✅ Important Notes:</h3>
+            <ul>
+                <li><strong>Use the exact amount based on your selected subjects.</strong></li>
+                <li><strong>Ensure your phone number matches the one used for payment.</strong></li>
+                <li><strong>Keep your Transaction ID safe—it is required for verification.</strong></li>
+            </ul>
+        </div>
+
+        <h2>Fill the form below to verify</h2>
+
+        <!-- ✅ Payment Form -->
+        <form id="paymentForm">
+            <label>Select Subjects:</label>
+            <div class="subjects-list">
+                <p>🔥 **Loading available subjects...**</p> <!-- Dynamic subjects loaded via JS -->
+            </div>
+
+            <label for="name">Full Name (as registered):</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number (used for payment):</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="amount">Total Amount Sent:</label>
+            <input type="number" id="amount" name="amount" required placeholder="Enter amount paid (MWK)">
+
+            <label for="transactionId">Transaction ID:</label>
+            <input type="text" id="transactionId" name="transactionId" required>
+
+            <button type="submit">Submit Payment</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Wanga | Secure Learning Platform</p>
+    </footer>
+
+    <script type="module" src="pay_page.js"></script>
+
+</body>
+</html>

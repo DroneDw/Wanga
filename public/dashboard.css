@@ -1,0 +1,330 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* ✅ Allows wrapping on smaller screens */
+    justify-content: center; /* ✅ Centers items when wrapping */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+/* ✅ Subscription Status Container */
+#subscriptionStatus {
+    list-style: none;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+/* ✅ Individual Subscription Item */
+#subscriptionStatus li {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 8px;
+}
+
+/* ✅ Last item in the list (removes bottom border) */
+#subscriptionStatus li:last-child {
+    border-bottom: none;
+}
+
+/* ✅ Expired Subscription */
+#subscriptionStatus li[style*="color: red"] {
+    background: #ffcccc;
+    color: red;
+    border-left: 5px solid red;
+}
+
+/* ✅ Active Subscription */
+#subscriptionStatus li[style*="color: green"] {
+    background: #d4edda;
+    color: green;
+    border-left: 5px solid green;
+}
+
+
+
+/* ✅ Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* ✅ Stack items vertically on small screens */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 20px; /* ✅ Slightly smaller logo for compact view */
+    }
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ✅ Cards for different sections */
+.status-card, .courses-card, .form-card {
+    flex: 1;
+    background: #eaf0f6;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* ✅ Dropdown Styling (Courses & Form Selection) */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    appearance: none; /* Removes default arrow */
+}
+
+/* ✅ Update Button Styling */
+button[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #45a049;
+}
+
+/* ✅ Stylish Checkboxes */
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin-right: 8px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+}
+
+input[type="checkbox"]::before {
+    content: "✓";
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    display: none;
+}
+
+input[type="checkbox"]:checked::before {
+    display: block;
+}
+
+/* ✅ Improved Course Links */
+.course-link {
+    display: block;
+    padding: 10px;
+    margin: 8px 0;
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.course-link:hover {
+    background: #45a049;
+}
+
+/* ✅ Subscription Days Remaining Display */
+.subscriptionStatus li {
+    list-style: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subscriptionStatus li[style*="red"] {
+    background-color: #ffcccc;
+    color: #d32f2f;
+}
+
+.subscriptionStatus li[style*="green"] {
+    background-color: #ccffcc;
+    color: #388e3c;
+}
+
+/* ✅ Footer */
+footer {
+    padding: 20px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ✅ Course Selection List Styling */
+.courses-card {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+/* ✅ Ensure checkboxes align properly */
+#editCoursesForm fieldset {
+    display: flex;
+    flex-direction: column; /* ✅ Aligns courses vertically */
+    align-items: flex-start; /* ✅ Ensures consistency in positioning */
+    gap: 10px; /* ✅ Spacing between checkboxes */
+}
+
+#editCoursesForm label {
+    display: flex;
+    align-items: center;
+    /* padding: 8px; */
+    border: 1px solid #ddd; /* ✅ Adds a light border */
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+#editCoursesForm label:hover {
+    background-color: #e0e0e0;
+    border-color: #007bff; /* ✅ Highlights selection on hover */
+}
+
+/* ✅ Checkbox Styling */
+#editCoursesForm input[type="checkbox"] {
+    /* margin-right: 10px; */
+    transform: scale(1.2); /* ✅ Slightly enlarge checkboxes */
+}
+
+/* ✅ Selected Courses List */
+#courseList {
+    /* margin-top: 2px; */
+    /* padding: 4px; */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    list-style: none;
+}
+
+#courseList li {
+    /* padding: 2px; */
+    border-bottom: 1px solid #ddd; /* ✅ Keeps formatting structured */
+    /* font-size: 16px; */
+    font-weight: bold;
+    color: #333;
+}
+
+#courseList li:last-child {
+    border-bottom: none; /* ✅ Removes border for the last item */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        text-align: left;
+        padding: 10px;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero .button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}

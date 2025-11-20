@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin - Update Topics</title>
+
+    <!-- ✅ Load Firebase via CDN (Ensure Proper Loading) -->
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"></script>
+
+    <!-- ✅ Load Admin Script AFTER Firebase -->
+    <script src="admin.js" defer></script>
+</head>
+<body>
+    <h1>Update Subject Topics</h1>
+
+    <label for="subject">Select Subject:</label>
+    <select id="subject">
+        <option value="math">Math</option>
+        <option value="chemistry">Chemistry</option>
+        <option value="physics">Physics</option>
+    </select>
+
+    <label for="topic">Today's Topic:</label>
+    <input type="text" id="topic" placeholder="Enter today's topic">
+
+    <label for="notes">Short Notes:</label>
+    <textarea id="notes" placeholder="Write brief notes"></textarea>
+
+    <label for="pdfLink">PDF Link:</label>
+    <input type="text" id="pdfLink" placeholder="Enter PDF URL (optional)">
+
+    <button id="saveTopicBtn">Save Topic</button>
+
+    <p id="statusMessage"></p>
+
+    <!-- ✅ Ensure JavaScript Executes Properly -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("saveTopicBtn").addEventListener("click", () => {
+                if (typeof updateTopic !== "undefined") {
+                    updateTopic();
+                } else {
+                    console.error("🚨 updateTopic function not found! Ensure admin.js is loading properly.");
+                    document.getElementById("statusMessage").textContent = "❌ Error: Script not loaded.";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

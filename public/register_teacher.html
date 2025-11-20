@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Teacher & Verifier Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Link to CSS -->
+    <link rel="stylesheet" href="register_teacher.css">
+
+    <!-- ✅ Load Firebase -->
+    <script type="module" src="register_teacher.js"></script>
+</head>
+<body>
+
+    <!-- ✅ Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Wanga Registration</div>
+        </div>
+    </nav>
+
+    <!-- ✅ Main Content -->
+    <main>
+        <section class="register-box">
+            <h1 id="formTitle">📚 Teacher Registration</h1>
+
+            <!-- ✅ Switch Button to Toggle Between Teacher & Verifier -->
+            <button id="toggleRole">Switch to Verifier Registration</button>
+
+            <!-- ✅ Email Input -->
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <!-- ✅ Password Input (Hidden for Verifiers) -->
+            <input type="password" id="password" placeholder="Enter password" required>
+
+            <!-- ✅ Subject & Class Dropdowns (Hidden for Verifiers) -->
+            <div id="teacherFields">
+                <label for="teacherSubject">📘 Select Your Subject:</label>
+                <select id="teacherSubject">
+                    <option value="">-- Choose Subject --</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="physics">Physics</option>
+                    <option value="biology">Biology</option>
+                    <option value="history">History</option>
+                </select>
+
+                <label for="teacherClass">🏫 Select Your Class:</label>
+                <select id="teacherClass">
+                    <option value="">-- Choose Class --</option>
+                    <option value="form1">Form 1</option>
+                    <option value="form2">Form 2</option>
+                    <option value="form3">Form 3</option>
+                    <option value="form4">Form 4</option>
+                </select>
+            </div>
+
+            <!-- ✅ Registration Button -->
+            <button id="registerBtn">Register</button>
+
+            <!-- ✅ Status Message -->
+            <p id="statusMessage"></p>
+
+            <!-- ✅ Login Link -->
+            <p>Already have an account? <a href="teacher_login.html">🔑 Log in here</a></p>
+        </section>
+    </main>
+
+    <!-- ✅ Footer -->
+    <footer>
+        <p>&copy; 2025 Wanga | Secure Access</p>
+    </footer>
+
+    <script type="module" src="register_teacher.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Courses - Wanga</title>
+    <link rel="stylesheet" href="course-selection.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Wanga</div>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-container">
+        <h1>Select Your Courses</h1>
+        <p>Choose the subjects you're enrolled in so we can personalize your dashboard.</p>
+
+        <form id="courseForm">
+            <fieldset>
+                <legend>Select Your Courses</legend>
+                
+                <!-- ✅ Mathematics is the only visible option for now -->
+                <label><input type="checkbox" name="courses" value="Mathematics"> Mathematics</label>
+                
+                <!-- ❌ Other subjects are hidden (commented out) for future expansion -->
+                <!-- <label><input type="checkbox" name="courses" value="Science"> Science</label> -->
+                <!-- <label><input type="checkbox" name="courses" value="English"> English</label> -->
+                <!-- <label><input type="checkbox" name="courses" value="History"> History</label> -->
+                <!-- <label><input type="checkbox" name="courses" value="Business Studies"> Business Studies</label> -->
+                <label><input type="checkbox" name="courses" value="Biology"> Biology</label>
+                <label><input type="checkbox" name="courses" value="chemistry"> Chemistry</label>
+                <label><input type="checkbox" name="courses" value="english"> English</label>                 
+                <label><input type="checkbox" name="courses" value="physics"> Physics</label>                 
+
+
+            </fieldset>
+            <br>
+            <button type="submit">Save & Continue</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Wanga | Secure Video Meetings</p>
+    </footer>
+
+    <!-- Load courses.js as a module -->
+    <script type="module" src="courses.js"></script>
+
+</body>
+</html>

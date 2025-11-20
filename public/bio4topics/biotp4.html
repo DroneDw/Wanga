@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Topic - Chemistry</title> <!-- 🔥 This will be dynamic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Link to CSS -->
+    <link rel="stylesheet" href="../all_topics.css"> <!-- 🔥 Dedicated CSS for topic pages -->
+
+    <!-- ✅ Load Firebase for this specific topic -->
+    <script type="module" src="biotp4.js"></script> <!-- 🔥 Dynamic script per topic -->
+</head>
+<body>
+
+    <!-- ✅ Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Wanga</div>
+            <ul class="nav-links">
+                <li><a href="../dashboard.html">Home</a></li>
+                <li><a href="../biology_form4.html">Topics</a></li>
+                <li><a href="../bio4quizs/bioquiztp4.html">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ✅ Main Content -->
+    <main>
+        <section class="lesson-box">
+            <h1 id="topicTitle">Loading topic...</h1> <!-- 🔥 Topic Title (Dynamic) -->
+
+            <p id="topicDescription">Loading description...</p> <!-- 🔥 Topic Notes -->
+
+            <hr> <!-- 🔥 Divider for clarity -->
+
+            <!-- ✅ Video Grid Layout -->
+            <h2>🎥 Topic Videos</h2>
+            <div id="videoGrid">Loading videos...</div> <!-- 🔥 Dynamically Load Videos -->
+        </section>
+        <!-- ✅ Quiz Section (Appears After Videos) -->
+        <section class="quiz-box">
+            <h2>📝 Test Your Knowledge</h2>
+            <p>Now that you've completed the lesson, take a quiz to reinforce your understanding!</p>
+            <button id="startQuiz">Start Quiz</button>
+        </section>
+    </main>
+
+    <!-- ✅ Footer -->
+    <footer>
+        <p>&copy; 2025 Wanga | Structured Learning Platform</p>
+    </footer>
+
+</body>
+</html>

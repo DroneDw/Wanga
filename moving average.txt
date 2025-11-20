@@ -1,0 +1,35 @@
+//@version=5
+strategy("Moving Average Crossover Scalper", overlay=true, default_qty_type=strategy.percent_of_equity, default_qty_value=100)
+
+// Define moving averages
+emaShort = ta.ema(close, 9)
+emaLong = ta.ema(close, 21)
+
+// Entry conditions
+longCondition = ta.crossover(emaShort, emaLong)
+shortCondition = ta.crossunder(emaShort, emaLong)
+
+// Stop loss and take profit settings
+atrValue = ta.atr(14)
+stopLossMultiplier = 1.5
+takeProfitMultiplier = 2.0
+
+// Calculate stop loss and take profit levels
+longStopLoss = close - (stopLossMultiplier * atrValue)
+longTakeProfit = close + (takeProfitMultiplier * atrValue)
+
+shortStopLoss = close + (stopLossMultiplier * atrValue)
+shortTakeProfit = close - (takeProfitMultiplier * atrValue)
+
+// Execute trades
+if longCondition
+    strategy.entry("Long", strategy.long)
+    strategy.exit("Take Profit/SL", from_entry="Long", stop=longStopLoss, limit=longTakeProfit)
+
+if shortCondition
+    strategy.entry("Short", strategy.short)
+    strategy.exit("Take Profit/SL", from_entry="Short", stop=shortStopLoss, limit=shortTakeProfit)
+
+// Plot EMAs
+plot(emaShort, title="9 EMA", color=color.blue)
+plot(emaLong, title="21 EMA", color=color.red)

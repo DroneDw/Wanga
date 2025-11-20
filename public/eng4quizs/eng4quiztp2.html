@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Wanga</title>
+    <link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Wanga Quiz</div>
+    </header>
+
+    <!-- ✅ Quiz Instructions Section -->
+    <section class="quiz-info">
+        <h1>How This Quiz Works</h1>
+        <p>✅ You have <strong>30 seconds</strong> to answer each question.</p>
+        <p>✅ Click the correct answer before time runs out.</p>
+        <p>✅ At the end, your results will be displayed here.</p>
+        <p>✅ Wrong answers will be <span style="color: red;">red</span>, correct ones <span style="color: green;">green</span>.</p>
+        <p>🚀 Give it your best shot and improve your learning!</p>
+    </section>
+
+    <!-- ✅ Quiz Container -->
+    <section class="quiz-container">
+        <h2>Topic Quiz</h2>
+        <p id="timer">Time Left: <span id="timeLeft">30</span> sec</p> <!-- ✅ Timer -->
+        <button id="startQuiz">Start Quiz</button>
+        <div id="question"></div> <!-- ✅ Question Display -->
+        <ul id="answers"></ul> <!-- ✅ Multiple-choice options -->
+
+        <button id="nextQuestion" disabled>Next</button>
+    </section>
+
+    <!-- ✅ Results Section (Updated) -->
+    <section class="quiz-results" id="quizResults">
+        <h2>Your Quiz Results</h2>
+        <p id="score"></p> <!-- ✅ Shows final score -->
+        <ul id="resultsList"></ul> <!-- ✅ Displays full list of answered questions -->
+    </section>
+
+    <footer>
+        <p>© 2025 Wanga | Learning Reinforcement</p>
+    </footer>
+
+    <script type="module" src="eng4quiztp2.js"></script>
+
+</body>
+</html>

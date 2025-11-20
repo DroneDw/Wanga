@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Teacher Dashboard - Upload Class Videos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Link to CSS -->
+    <link rel="stylesheet" href="biology_teacher.css">
+
+    <!-- ✅ Load JavaScript -->
+    <script type="module" src="biology_form3_teacher.js"></script>
+</head>
+<body>
+
+    <!-- ✅ Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Wanga Teacher Dashboard</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ✅ Main Content -->
+    <main>
+        <section class="upload-box">
+            <h1>📤 Upload Class Recording</h1>
+            <form id="uploadForm">
+                <label for="videoTitle">🎬 Video Title:</label>
+                <input type="text" id="videoTitle" placeholder="Enter class video title..." required>
+
+                <label for="youtubeLink">🔗 YouTube Video Link:</label>
+                <input type="url" id="youtubeLink" placeholder="Paste YouTube link here..." required>
+
+                <label for="pdfLink">📄 Notes PDF Link (Optional):</label>
+                <input type="url" id="pdfLink" placeholder="Paste notes link here...">
+
+                <!-- ✅ Submit Button -->
+                <button type="submit">🚀 Upload to Firestore</button>
+            </form>
+
+            <!-- ✅ Status Display -->
+            <p id="uploadStatus"></p>
+        </section>
+    </main>
+
+    <!-- ✅ Footer -->
+    <footer>
+        <p>&copy; 2025 Wanga | Secure Educational Tools</p>
+    </footer>
+
+</body>
+</html>

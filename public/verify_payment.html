@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Payment - Wanga</title>
+    <link rel="stylesheet" href="verify_payment.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Wanga Verification</div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="pay_page.html">Payments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="verification-container">
+        <h1>Payment Verification</h1>
+        <p>Enter the details provided by the user to verify their subscription.</p>
+
+        <form id="verificationForm">
+            <label for="phone">User's Phone Number (used for payment):</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="transactionId">Transaction ID:</label>
+            <input type="text" id="transactionId" name="transactionId" required>
+
+            <label for="amountPaid">Amount Received (MWK):</label>
+            <input type="number" id="amountPaid" name="amountPaid" required>
+
+            <button type="submit">Verify Payment</button>
+        </form>
+        
+        <p id="verificationStatus"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Wanga | Secure Learning Platform</p>
+    </footer>
+
+    <script type="module" src="verify_payment.js"></script>
+
+</body>
+</html>

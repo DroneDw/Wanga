@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Teacher Dashboard - Update Topics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Link to CSS -->
+    <link rel="stylesheet" href="biology_teacher.css">
+
+    <!-- ✅ Load Firebase -->
+    <script type="module" src="chemistry_teacher_form4.js"></script>
+</head>
+<body>
+
+    <!-- ✅ Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Wanga Teacher Dashboard</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ✅ Main Content -->
+    <main>
+        <section class="upload-box">
+            <h1>👨‍🔬 Update Chemistry Topic</h1>
+
+            <!-- ✅ Topic Input -->
+            <input type="text" id="topicTitle" placeholder="Enter topic title..." required>
+
+            <!-- ✅ Notes Input -->
+            <textarea id="topicNotes" placeholder="Write short notes about the topic..." required></textarea>
+
+            <!-- ✅ Google Drive PDF Link Input -->
+            <label for="pdfLink">🔗 Enter Google Drive PDF Link:</label>
+            <input type="url" id="pdfLink" placeholder="Paste your PDF link here..." required>
+
+            <!-- ✅ Meeting Link Input -->
+            <label for="meetLink">🎥 Enter Google Meet Link:</label>
+            <input type="url" id="meetLink" placeholder="Paste your meeting link here..." required>
+
+            <!-- ✅ Automatically Set Meeting Time -->
+            <p id="meetingTimeDisplay">🕒 Next meeting will automatically be set for 7 PM today.</p>
+
+            <!-- ✅ Submit Button -->
+            <button id="uploadBtn">Save Topic & Notes</button>
+
+            <!-- ✅ Status Display -->
+            <p id="statusMessage"></p>
+        </section>
+        <!-- ✅ New Section: Upload YouTube Lesson Video -->
+        <section class="upload-video">
+            <h2>📹 Upload Lesson Recording</h2>
+            <p>Paste the YouTube video link for students to watch later:</p>
+
+            <!-- ✅ Video Title Input -->
+            <label for="videoTitle">📝 Enter Video Title:</label>
+            <input type="text" id="videoTitle" placeholder="Enter lesson video title..." required>
+
+            <!-- ✅ YouTube Video Link Input -->
+            <label for="videoLink">🎥 Enter YouTube Video Link:</label>
+            <input type="url" id="videoLink" placeholder="Paste your YouTube video link here..." required>
+
+            <!-- ✅ Upload Button -->
+            <button id="uploadVideoBtn">Save Lesson Recording</button>
+
+            <!-- ✅ Status Display -->
+            <p id="videoStatusMessage"></p>
+        </section>        
+    </main>
+
+    <!-- ✅ Footer -->
+    <footer>
+        <p>&copy; 2025 Wanga | Secure Educational Tools</p>
+    </footer>
+
+</body>
+</html>

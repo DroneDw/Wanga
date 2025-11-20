@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Wanga</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Wanga</div>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="signup-container">
+        <h1>Create Your Account</h1>
+        <p>Join Wanga today and start hosting video meetings!</p>
+
+        <form id="signupForm">
+            <input type="text" id="name" placeholder="Full Name" required autocomplete="name">
+            <input type="email" id="email" placeholder="Email" required autocomplete="email">
+            <p class="note">⚠️ Make sure this email is correct! If forgotten, you won’t be able to recover your account.</p>
+            <input type="tel" id="phone" placeholder="Phone Number" required autocomplete="tel">
+            <input type="password" id="password" placeholder="Password" required autocomplete="new-password">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password">
+
+            <!-- ✅ Class Selection Dropdown -->
+            <label for="classSelection">📚 Select Your Class:</label>
+            <select id="classSelection" required>
+                <option value="" disabled selected>Choose your class</option>
+                <option value="form1">Form 1</option>
+                <option value="form2">Form 2</option>
+                <option value="form3">Form 3</option>
+                <option value="form4">Form 4</option>
+            </select>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Wanga | Secure Video Meetings</p>
+    </footer>
+
+    <script type="module" src="signup.js"></script>
+
+</body>
+</html>

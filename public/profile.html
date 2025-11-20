@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Wanga</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Wanga</div>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="profile-container">
+        <h1>Your Profile</h1>
+        
+        <form id="profileForm">
+            <label>Name:</label>
+            <input type="text" id="name" disabled>
+
+            <label>Email:</label>
+            <input type="email" id="email"> <!-- ✅ Made email editable -->
+            <p class="note">⚠️ Ensure this email is valid—it will be used for password recovery.</p>
+            <button type="button" id="updateEmailBtn">Confirm Email Change</button> <!-- ✅ Added confirmation button -->
+
+            <label>Phone:</label>
+            <input type="text" id="phone">
+
+            <label>Class:</label>
+            <select id="class">
+                <option value="form1">Form 1</option>
+                <option value="form2">Form 2</option>
+                <option value="form3">Form 3</option>
+                <option value="form4">Form 4</option>
+            </select>
+
+            <label>Subjects Enrolled:</label>
+            <ul id="subjectsList"></ul>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Wanga | Secure Video Learning</p>
+    </footer>
+
+    <script type="module" src="profile.js"></script>
+
+</body>
+</html>

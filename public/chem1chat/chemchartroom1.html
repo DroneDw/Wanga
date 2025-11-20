@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Chatroom - Form 1</title>
+    <link rel="stylesheet" href="../chat.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Wanga Chemistry Chat (Form 1)</div>
+        <div id="activeUsers">👥 Active Users: <span id="userCount">0</span></div> <!-- ✅ Active users display -->
+    </header>
+
+    <section class="chat-container">
+        <h1>Welcome to Form 1 Chemistry Discussion</h1>
+        <p>Ask up to 3 questions per day and collaborate with your peers!</p>
+        
+        <div id="messages"></div> <!-- ✅ Live message display -->
+
+        <!-- ✅ Reply Indicator -->
+        <div id="replyIndicator" class="hidden">
+            <button id="cancelReply">Cancel Reply</button>
+        </div>
+
+        <form id="messageForm">
+            <input type="text" id="messageInput" placeholder="Type your chemistry question..." required>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Wanga | Secure Classroom Chat</p>
+    </footer>
+
+    <script type="module" src="../chem1chat/chemchartroom1.js"></script>
+
+</body>
+</html>

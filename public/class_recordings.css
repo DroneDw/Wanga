@@ -1,0 +1,144 @@
+/* ✅ General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ Navigation Bar */
+nav {
+    background-color: #004080;
+    padding: 15px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Main Content Box */
+.recordings-box {
+    background: white;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #004080;
+}
+
+h2 {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+/* ✅ Today's Session Section */
+.today-session {
+    background: #e0f7fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.today-session p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.today-session a {
+    font-weight: bold;
+    color: #008080;
+}
+
+/* ✅ Past 5 Days' Recordings */
+.past-recordings {
+    background: #fff7e6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#recordingsList {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#recordingsList a {
+    font-weight: bold;
+    color: #c0392b;
+    text-decoration: none;
+}
+
+#recordingsList a:hover {
+    text-decoration: underline;
+}
+/* ✅ Weekly Schedule */
+.weekly-schedule {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.weekly-schedule h2 {
+    text-align: center;
+    color: #d35400;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+th {
+    background: #ffcc80;
+    font-weight: bold;
+}
+
+/* ✅ Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    margin-top: 40px;
+}

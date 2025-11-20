@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Wanga</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Wanga</div>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="chat.html">Message</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard-container">
+        <h1>Welcome, <span id="userName">User</span>!</h1>
+        <p>Your personalized dashboard is here.</p>
+
+        <div class="dashboard-content">
+            <!-- Subscription Status -->
+            <div class="status-card">
+                <h2>Subscription Status</h2>
+                <ul id="subscriptionStatus"></ul> <!-- Changed from <p> to <ul> for better formatting -->
+            </div>
+
+            <!-- Editable Course Selection -->
+            <div class="courses-card">
+                <ul id="courseList"></ul>
+                <h2>Your Selected Courses</h2>
+                <form id="editCoursesForm">
+                    <fieldset>
+                        <legend>Manage Your Courses</legend>
+                        <label>
+                            <input type="checkbox" name="courses" value="Mathematics"> Mathematics
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="courses" value="Biology"> Biology
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="courses" value="chemistry"> Chemistry
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="courses" value="english"> English
+                        </label><br>                        <label>
+                            <input type="checkbox" name="courses" value="physics"> Physics
+                        </label><br>                        
+                    </fieldset>
+                    <button type="submit">Update Courses</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Wanga | Secure Video Meetings</p>
+    </footer>
+
+    <script type="module" src="dashboard.js"></script>
+
+</body>
+</html>

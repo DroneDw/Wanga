@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Teacher Dashboard - Update Topics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Link to CSS -->
+    <link rel="stylesheet" href="teacher.css">
+
+    <!-- ✅ Load Firebase -->
+    <script type="module" src="teacher.js"></script>
+</head>
+<body>
+
+    <!-- ✅ Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Wanga Teacher Dashboard</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ✅ Main Content -->
+    <main>
+        <section class="upload-box">
+            <h1>📘 Update Mathematics Topic</h1>
+
+            <!-- ✅ Topic Input -->
+            <input type="text" id="topicTitle" placeholder="Enter topic title..." required>
+
+            <!-- ✅ Notes Input -->
+            <textarea id="topicNotes" placeholder="Write short notes about the topic..." required></textarea>
+
+            <!-- ✅ PDF Upload -->
+            <label for="pdfUpload">📂 Upload PDF:</label>
+            <input type="file" id="pdfUpload" accept=".pdf">
+
+            <!-- ✅ Submit Button -->
+            <button id="uploadBtn">Upload Topic, Notes & PDF</button>
+
+            <!-- ✅ Status Display -->
+            <p id="statusMessage"></p>
+        </section>
+    </main>
+
+    <!-- ✅ Footer -->
+    <footer>
+        <p>&copy; 2025 Wanga | Secure Educational Tools</p>
+    </footer>
+
+</body>
+</html>

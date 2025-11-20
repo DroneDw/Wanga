@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Quiz Container */
+.quiz-container {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+/* Timer */
+#timer {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Question Styling */
+#question {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Answer Buttons */
+#answers {
+    list-style: none;
+    padding: 0;
+}
+
+#answers button {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ✅ Start Quiz Button Styling */
+#startQuiz {
+    display: block;
+    margin: 20px auto; /* ✅ Centers the button */
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#startQuiz:hover {
+    background-color: #0056b3;
+}
+
+#answers button:hover {
+    background-color: #0056b3;
+}
+
+/* Next Question Button */
+#nextQuestion {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#nextQuestion:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* ✅ Quiz Results Section */
+.quiz-results {
+    display: none; /* ✅ Initially hidden until quiz is completed */
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-results h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+#score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* ✅ Result List Styling */
+#resultsList {
+    list-style: none;
+    padding: 0;
+}
+
+#resultsList li {
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Highlight Correct & Wrong Answers */
+.correct-answer {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong-answer {
+    color: red;
+    font-weight: bold;
+}
+/* ✅ Feedback Message Styling */
+#quizResults p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* ✅ Red for low scores (Below 50%) */
+.feedback-red {
+    background-color: #ffcccc;
+    color: red;
+    border: 2px solid red;
+}
+
+/* ✅ Orange for medium scores (50% - 75%) */
+.feedback-orange {
+    background-color: #ffe5b4;
+    color: #ff9900;
+    border: 2px solid #ff9900;
+}
+
+/* ✅ Green for high scores (Above 75%) */
+.feedback-green {
+    background-color: #d4edda;
+    color: green;
+    border: 2px solid green;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+}
