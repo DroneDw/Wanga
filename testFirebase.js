@@ -1,13 +1,17 @@
+// Load environment variables
+import 'dotenv/config';
+
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
+// 🔒 Firebase config now uses environment variables
 const firebaseConfig = {
-    apiKey: "AIzaSyCVMo8f8Fghlv7qXH1TykjPwpfJCE7jr4M",
-    authDomain: "wanga-456817.firebaseapp.com",
-    projectId: "wanga-456817",
-    storageBucket: "wanga-456817.appspot.com",
-    messagingSenderId: "530806303421",
-    appId: "1:530806303421:web:8f59f74b1385b787c2e5d4"
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIREBASE_APP_ID
 };
 
 // ✅ Initialize Firebase

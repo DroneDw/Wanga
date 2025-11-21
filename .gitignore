@@ -1,7 +1,16 @@
+# Node modules
 node_modules/
-firebase-admin.json
+
+# Firebase admin credentials
+secrets/firebase-admin.json
+
+# Environment variables
 .env
+
+# MacOS system files
 .DS_Store
+
+# Logs
 npm-debug.log
 yarn-debug.log
 yarn-error.log
