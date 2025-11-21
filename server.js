@@ -5,20 +5,27 @@ import path from "path";
 import fs from "fs";
 
 // ✅ Load Firebase Admin credentials
-const serviceAccount = JSON.parse(fs.readFileSync("./firebase-admin.json", "utf-8"));
+const serviceAccount = JSON.parse(fs.readFileSync("./secrets/firebase-admin.json", "utf-8"));
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
 });
 
-const db = admin.firestore(); // 🔥 Correct Firestore instance for Admin SDK
+const db = admin.firestore(); // Firestore instance for Admin SDK
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Use Render's PORT
 
-app.use(cors()); // ✅ Enable cross-origin requests
+app.use(cors()); // Enable CORS
 app.use(express.json());
+
+// Serve static files from public folder
 app.use(express.static(path.join(process.cwd(), "public")));
+
+// Default landing page route
+app.get("/", (req, res) => {
+    res.sendFile(path.join(process.cwd(), "public", "home_page.html"));
+});
 
 // ✅ Handle User Registration (Verifier/Teacher)
 app.post("/register", async (req, res) => {
@@ -38,8 +45,8 @@ app.post("/register", async (req, res) => {
 
         // ✅ Store user data in Firestore
         await db.collection("users").doc(userRecord.uid).set({
-            email: email,
-            role: role,
+            email,
+            role,
             createdAt: new Date(),
         });
 
@@ -52,7 +59,7 @@ app.post("/register", async (req, res) => {
     }
 });
 
-// ✅ Handle Login Requests (Checks Password)
+// ✅ Handle Login Requests
 app.post("/login", async (req, res) => {
     const { email, password } = req.body;
 
@@ -64,8 +71,8 @@ app.post("/login", async (req, res) => {
         // ✅ Retrieve user from Firebase Authentication
         const userRecord = await admin.auth().getUserByEmail(email);
 
-        // ❌ Firebase Admin SDK **does NOT verify passwords directly**
-        // ✅ Clients must authenticate using Firebase Authentication SDK before calling this API
+        // ❌ Passwords cannot be verified via Admin SDK
+        // Clients must authenticate with Firebase Auth SDK
 
         // ✅ Get user role from Firestore
         const userDoc = await db.collection("users").doc(userRecord.uid).get();
@@ -83,7 +90,7 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// ✅ Retrieve User Role for Verification
+// ✅ Retrieve User Role
 app.get("/user-role/:uid", async (req, res) => {
     const { uid } = req.params;
 
@@ -100,7 +107,7 @@ app.get("/user-role/:uid", async (req, res) => {
     }
 });
 
-// ✅ Start the Server
+// ✅ Start server
 app.listen(PORT, () => {
     console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
